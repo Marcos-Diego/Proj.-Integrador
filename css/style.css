@@ -1,4 +1,3 @@
-.toplick:hover {
-    background-color: red;
+nav a:hover {
     font-size: 18px;
-}
+};
