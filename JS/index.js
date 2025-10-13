@@ -8,20 +8,19 @@ const button = document.getElementById("menu");
 lMenu = lMenu[0].children;
 
 for (let x = 0; x < lMenu.length; x++) {
-   li[x].classList.add("border-b-2", "mb-[40px]", "pb-[5px]", "pl-[8px]", "w-[100%]", "shadow-xl");
-   if (x == 0) {
-      li[x].classList.add("mt-[30px]")
-   };
+    li[x].classList.add("hover:text-gray-950", "text-gray-700", "mb-[40px]", "pb-[5px]", "pl-[8px]", "w-[100%]", 
+        "shadow-xl", "border-b-2");
+    if (x == 0) {
+        li[x].classList.add("mt-[30px]")
+    };
 };
 
-let click = 0;
 button.addEventListener("click", () => {
-   if (click == 0) {
-      click++
-      for (let x = 0; x < corpo.length; x++) {
-         corpo[x].classList.add("brightness-50")
-      }
-      nav[0].classList.remove("hidden", "brightness-50")
-   }
-})
+    nav[0].classList.remove("hidden")
+    for (let x = 0; x < corpo.length; x++) {
+        if (x == 1) { continue; }
+        corpo[x].classList.add("blur-[2px]")
+    }
+}
+)
 //fim do menu
