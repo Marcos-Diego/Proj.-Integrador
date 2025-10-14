@@ -1,9 +1,7 @@
-//inicio do menu
+//inicio do header
 let li = document.getElementsByTagName("li");
 let lMenu = document.getElementsByTagName("ul");
-const nav = document.getElementsByTagName("nav");
 const corpo = document.body.children;
-const button = document.getElementById("menu");
 
 lMenu = lMenu[0].children;
 
@@ -15,7 +13,12 @@ for (let x = 0; x < lMenu.length; x++) {
     };
 };
 
-button.addEventListener("click", () => {
+//fim do header
+//inicio do nav
+const nav = document.getElementsByTagName("nav");
+const menuClose = document.getElementById("menu");
+
+menuOpen.addEventListener("click", () => {
     nav[0].classList.remove("hidden")
     for (let x = 0; x < corpo.length; x++) {
         if (x == 1) { continue; }
@@ -23,4 +26,24 @@ button.addEventListener("click", () => {
     }
 }
 )
-//fim do menu
+//fim do nav
+//inicio do banner
+let nextBanner = 0;
+
+const bannerLeft = document.getElementById("banner-left");
+bannerLeft.addEventListener("click", () => {
+    nextBanner--;})
+
+const bannerRight = document.getElementById("banner-right");
+bannerRight.addEventListener("click", () => {
+    nextBanner++;})
+
+const banner = document.getElementById("banner");
+
+setInterval(bannerIMG, 5000);
+function bannerIMG() {
+    
+
+}
+
+//fim do banner
