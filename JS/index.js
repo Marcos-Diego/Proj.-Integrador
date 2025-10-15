@@ -16,7 +16,7 @@ for (let x = 0; x < lMenu.length; x++) {
 //fim do header
 //inicio do nav
 const nav = document.getElementsByTagName("nav");
-const menuClose = document.getElementById("menu");
+const menuOpen = document.getElementById("menu");
 
 menuOpen.addEventListener("click", () => {
     nav[0].classList.remove("hidden")
@@ -28,22 +28,34 @@ menuOpen.addEventListener("click", () => {
 )
 //fim do nav
 //inicio do banner
-let nextBanner = 0;
+    //inicio de img
+const banner = document.getElementById("banner")
+let nextBanner = banner.lastElementChild;
 
+const listaIMG = ["img/Amantino_Camara_Logo.png", "img/git_imagem.jpg"];
+let imgMAX = listaIMG.length;
+console.log(imgMAX)
+    
+function tempo() {
+    if (nextBanner == "bg-[url(img/Amantino_Camara_Logo.png)]")
+    setInterval(start, 5000);};
+    function start() {
+
+    }
+    
+tempo();
+    
+    //fim de img
+    //inicio de botoes e suas funçoes
 const bannerLeft = document.getElementById("banner-left");
 bannerLeft.addEventListener("click", () => {
-    nextBanner--;})
-
+    tempo()
+});
 const bannerRight = document.getElementById("banner-right");
 bannerRight.addEventListener("click", () => {
-    nextBanner++;})
+    tempo()
 
-const banner = document.getElementById("banner");
-
-setInterval(bannerIMG, 5000);
-function bannerIMG() {
-    
-
-}
+ });
+    //fim de botoes e suas funçoes
 
 //fim do banner
