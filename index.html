@@ -7,33 +7,43 @@
     <title>Header</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
 </head>
 
 <body class="bg-stone-50">
     <!--inicio do header-->
-    <header class="flex bg-[#FFCEB8] h-[90px]">
+    <header class="flex items-center relative bg-[#FFCEB8] h-[90px]">
         <div class="flex items-center m-[26px]">
             <img src="img/Amantino_Camara_Logo.png" alt="Amandinho Camâra Logo" class="flex-none size-[62px]">
         </div>
-        <button type="button" id="menu">Click Me!</button>
+       <button type="button" id="menu" class="absolute right-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>  
+        </button>
     </header>
     <!--Fim do header-->
     <!--inicio do nav-->
     <nav class="flex absolute top-0 left-0 bg-stone-50 w-[20%] hidden">
         <ul class="w-full">
-            <li><p class="toplick"><a href="#home">HOME</a></p></li>
-            <li><p class="toplick"><a href="#faq">FAQ</a></p></li>
-            <li><p class="toplick"><a href="#contatos">CONTATOS</a></p></li>
-            <li><p class="toplick"><a href="#doaçoes">DOAÇÕES</a></p></li>
-            <li><p class="toplick"><a href="#empresas">EMPRESAS</a></p></li>
+            <li><p class="toplick"><a href="#home">HOME</a></p>
+                <hr></li>
+            <li><p class="toplick"><a href="#faq">FAQ</a></p>
+                <hr></li>
+            <li><p class="toplick"><a href="#contatos">CONTATOS</a></p>
+                <hr></li>
+            <li><p class="toplick"><a href="#doaçoes">DOAÇÕES</a></p>
+                <hr></li>
+            <li><p class="toplick"><a href="#empresas">EMPRESAS</a></p>
+                <hr></li>
         </ul>
     </nav>
     <!--Fim do headr-->
     <!--inicio do banner-->
-    <section id="banner" class="w-full h-[500px] mt-[20px] bg-[url(img/Amantino_Camara_Logo.png)]">
-        <button type="button" id="banner-left">Click Me!</button>
-        <button type="button" id="banner-right">Click Me!</button>
+    <section id="banner" class=" flex justify-between h-[500px] mt-[20px] relative">
+        <!--<img src="img/git_imagem.jpg" class="w-full h-[500px] absolute">-->
+        <button type="button" id="banner-left" class="relative flex items-center">Click Me!</button>
+        <button type="button" id="banner-right" class="relative flex items-center">Click Me!</button>
     </section>
     <!--Fim do baneer-->
     <script src="JS/index.js"></script>
